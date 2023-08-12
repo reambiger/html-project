@@ -1,0 +1,496 @@
+body{    background-color: #f4eeee;
+}
+
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+nav {
+    background-color: #333;
+    left: 0;
+    top: 0;
+    height: 10vh;
+    width:100vw;
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: space-around;
+    
+   
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar li a:hover {
+    background-color: #555;
+}
+
+li img{ height: 8vh;}
+  
+
+#michal-video {
+    padding-top:10vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#open{
+  font-size: 1000%;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform:translate(-50%);
+  color: rgb(253, 250, 250);
+  z-index: 1;
+} 
+
+#str{font-size: 300%;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform:translate(-50%);
+  color: rgb(186, 3, 3);}
+
+  @keyframes slide-up {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+        
+    }
+  }
+  .wal{
+    animation: slide-up 2s ease-in-out 0.5s forwards;
+  
+  }
+  
+  .air{
+    animation: slide-up 2s ease-in-out 1s forwards;
+  
+  }
+   
+  .card {
+    position: relative;
+    width: 190px;
+    height: 254px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    align-items: center
+   
+   
+  }
+
+  .card .icon{height: 80%; width: 80%;}  
+
+  
+  
+  .card .content {
+    position: relative;
+    padding: 10px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.5em;
+     color: #e81cff;
+  }
+
+   /* אנימציה קלף התחלה */
+  .card::before {
+    content: '';
+   
+    margin: auto;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1.2em;
+  }
+  
+  .card::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(30px);
+  }
+  
+  .card:hover::before {
+    transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+  }
+  
+  
+
+  .card:hover {
+    transform: translateY(-20px);
+  }
+  
+
+  /* אנימציה קלף סוף */
+
+#card-display{position: relative; display: grid;  width:100%; height: 100vh; align-items:center;
+  background-image: linear-gradient(  rgba(185, 185, 183, 0.7),rgba(223, 47, 47, 0.7)
+  ),
+  url("../air_jordan/asssets_jordan/back.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+   grid-template-columns:repeat(3 , 20vh); justify-content: space-around;}
+
+
+#home-page{display: flex; flex-direction: column; width:100%;}
+
+.social-media{display: flex;background-color: #555; justify-content: center;
+  positio; bottom:0%; width:100vw; height:10vh; left:0%; } 
+
+.media{
+    width: 30vw;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.055);
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 10vw;
+    height: 10vh;
+    border-radius: 50%;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    transition-duration: .3s;
+    
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+ 
+  a {
+    text-decoration: none;
+}
+
+#grid-container{grid-template-columns:40vh 40vh 40vh 40vh  ; position: relative;
+  top: 11vh;
+    grid-template-rows: 27vw 27vw 27vw 27vw ; display: grid;}
+ .webpage{width:100vw; padding-bottom: 12vh;
+    background-color:gray;
+     color: #e81cff;
+display: flex;align-items:center;flex-direction: column; } 
+
+#headline{font: size 1000px;}
+
+#text{display: flex;flex-direction: column; margin-left:5vw;}
+
+#prodact{display: flex;flex-direction: row;margin-top: 13vh;margin-bottom:5vh; justify-content: space-around;}
+
+.old{ width:10vw ; height:10vh ;display:flex; }
+
+#img-cont{display: grid; grid-template-rows: repeat(7 , 5vw); 
+  
+}
+
+  .young{display: none;position:absolute;}
+
+.old:hover + .young{display: flex; left:30vw; height:80vh;width:40w;
+  z-index: 1;position: absolute;  top:13vh; }
+
+.stedy{ height:80vh;width:40w; margin-left:5%;}
+
+#sizes{display: grid; left: 50vw; bottom: 0%;
+grid-template-columns:repeat(3 ,15vh )  ; grid-template-rows:repeat(5 , 3vw ); gap:2%;}
+
+#sel{font-size:120%;}
+
+#guide{font-size:120%; position: absolute;top:60.5vh;left: 89vw;}
+
+#price{font-size:120%;margin-bottom: 14vh;}
+
+#top{font-size:150%; margin-bottom: 7vh;} 
+
+
+#few{ color: rgb(147, 121, 25); margin-bottom:15vh}
+
+
+
+
+
+
+ 
+/* לב התחלה לב*/
+.heart-container {
+  --heart-color: rgb(255, 91, 137);
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transition: .3s;
+  bottom: 70vh;
+  left: 91vw;
+
+}
+
+.heart-container .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.heart-container .svg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-container .svg-outline,
+        .heart-container .svg-filled {
+  fill: var(--heart-color);
+  position: absolute;
+}
+
+.heart-container .svg-filled {
+  animation: keyframes-svg-filled 1s;
+  display: none;
+}
+
+.heart-container .svg-celebrate {
+  position: absolute;
+  animation: keyframes-svg-celebrate .5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-filled {
+  display: block
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-celebrate {
+  display: block
+}
+
+@keyframes keyframes-svg-filled {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}  
+
+@keyframes keyframes-svg-celebrate {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}  /* לב סוף*/
+
+
+
+/* התחלה עגלה */
+
+.btn-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  
+}
+
+.btn-cart::after {
+  content: attr(data-quantity);
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s linear;
+  bottom: 115%;
+}
+
+.icon-cart {
+  width: 24.38px;
+  height: 30.52px;
+  transition: .2s linear;
+}
+
+.icon-cart path {
+  fill: rgb(240, 8, 8);
+  transition: .2s linear;
+}
+
+.btn-cart:hover > .icon-cart {
+  transform: scale(1.2);
+}
+
+.btn-cart:hover > .icon-cart path {
+  fill: rgb(186, 34, 233);
+}
+
+.btn-cart:hover::after {
+  visibility: visible;
+  opacity: 1;
+  bottom:105%;
+}
+
+.quantity {
+  display: none;
+}
+
+
+
+/* סוף עגלה */
+
+@media screen and (max-width: 400px) {
+ #card-display{display: flex; flex-direction: column;}
+ #open{font-size: 400%; top: 10%;}
+#str{top: 20%;font-size:100%;}
+ .media {
+  width: 57vw;}
+#grid-container{display: flex;
+  flex-direction: column;}
+  
+  #grid-container .card{margin: 4%;}
+
+#prodact{flex-direction: column-reverse;}
+
+.stedy{height:37vh;width:100vw;margin-left: 0%;}
+
+.old:hover + .young{display: flex; left:0vw; height:37vh;width: 100vw;
+  z-index: 1;position: absolute;  top:38vh; }
+
+#img-cont{grid-template-columns: repeat(7 , 5vh);}
+
+
+
+.heart-container{display: none;}
+
+#guide{display: none;}
+
+#text{margin-bottom: 4vh;margin-left: 0%;}
+
+#few{margin-bottom: 1vh;}
+
+#price{margin-bottom: 1vh;}
+
+#top{margin-bottom: 1vh;}
+
+#sizes button{font-size:40%;}
+
+.navbar{align-items: flex-start;}
+
+.navbar li a{ font-size: 80%; padding-left:1px; }
+
+}
+
